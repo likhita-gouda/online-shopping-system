@@ -4,13 +4,13 @@ on: push
 
 jobs:
   build:
-     runs_on: ubuntu_latest
+     runs-on: ubuntu-latest
      steps:
        - run: |
             mkdir temp
             echo "alpha" > temp/alpha.html
 
-      - user: action/upload-artifact@v4
+      - user: actions/upload-artifact@v4
         with:
           name: files
           path: temp/
